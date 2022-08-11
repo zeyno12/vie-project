@@ -74,3 +74,16 @@ var swiper = new Swiper(".mySwiper", {
       $('#load').delay(150).fadeOut('slow'); 
   }, 30000);
   })
+  // burger
+  const burger=document.querySelector(".burger");
+if(burger){
+  burger.addEventListener("click", function () {
+      const mobilnav = document.querySelector(".main_list");
+      if (mobilnav.style.transform == "translateX(-500px)") {
+        mobilnav.style.transform = "translateX(0px)";
+      }
+      else  {
+        mobilnav.style.transform = "translateX(-500px)";
+      }
+    })
+}

@@ -1,0 +1,15 @@
+@mixin imagedetals($wid, $heit, $ob-fit) {
+  width: $wid;
+  height: $heit;
+  object-fit: $ob-fit;
+}
+@mixin nav($puding, $wid) {
+  padding: $puding;
+  width: $wid;
+}
+@mixin Main_Flex($conten, $items, $gap) {
+  display: flex;
+  justify-content: $conten;
+  align-items: $items;
+  gap: $gap;
+}

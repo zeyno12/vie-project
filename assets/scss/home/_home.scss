@@ -1,22 +1,16 @@
 body {
-  background: #111215;
+  background: $mainColor;
 }
 nav {
-  padding: 16px 0px;
-  width: 100%;
+  @include nav(16px 0px, 100%);
   .mainlogo {
     img {
-      width: 20%;
-      height: auto;
-      object-fit: cover;
+      @include imagedetals(20%, auto, cover);
     }
   }
   .main_list {
     ul {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 20px;
+      @include Main_Flex(flex-end, center, 20px);
       li {
         list-style: none;
         list-style-type: none;
@@ -24,19 +18,14 @@ nav {
           text-decoration: none;
           font-size: 12px;
           font-weight: 500;
-          color: #fff;
+          color: $whitecolor;
           padding: 15px 7px;
           margin: 10px 15px;
-          font-family: "Manrope", sans-serif;
           cursor: pointer;
         }
       }
     }
-    @media (max-width: 768px) {
-      display: none;
-    }
   }
-
   .hidden_li {
     position: relative;
     visibility: hidden;
@@ -73,6 +62,38 @@ nav {
     .active {
       visibility: visible !important;
       height: auto !important;
+    }
+  }
+  .burger {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+    z-index: +3;
+    .main_list {
+      margin-top: 20px;
+      position: absolute;
+      width: 100%;
+      top: 88px;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transform: translateX(-500px);
+      transition: 0.3 ease-in-out;
+      ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        li {
+          padding: 12px 0px;
+        }
+      }
+    }
+    .burger {
+      display: block;
+      color: $whitecolor;
     }
   }
 }
@@ -646,7 +667,7 @@ nav {
       text-align: center;
       button {
         background: rgba(72, 72, 72, 0.791);
-        padding: 15px 70px;
+        padding: 4px 70px;
         border-radius: 26px;
         a {
           text-decoration: none;

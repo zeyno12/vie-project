@@ -39,14 +39,7 @@ nav .main_list ul li a {
   color: #fff;
   padding: 15px 7px;
   margin: 10px 15px;
-  font-family: "Manrope", sans-serif;
   cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  nav .main_list {
-    display: none;
-  }
 }
 
 nav .hidden_li {
@@ -99,6 +92,47 @@ nav .hidden_li #second_li li a:hover {
 nav .hidden_li .active {
   visibility: visible !important;
   height: auto !important;
+}
+
+nav .burger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+    z-index: +3;
+  }
+  nav .main_list {
+    margin-top: 20px;
+    position: absolute;
+    width: 100%;
+    top: 88px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+    -webkit-transition: 0.3 ease-in-out;
+    transition: 0.3 ease-in-out;
+  }
+  nav .main_list ul {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .main_list ul li {
+    padding: 12px 0px;
+  }
+  nav .burger {
+    display: block;
+    color: #fff;
+  }
 }
 
 #Apps_Together {
@@ -725,7 +759,7 @@ nav .hidden_li .active {
 
 #Pricing_Package .Free_Package .free_button button {
   background: rgba(72, 72, 72, 0.791);
-  padding: 15px 70px;
+  padding: 4px 70px;
   border-radius: 26px;
 }
 
@@ -1173,5 +1207,6 @@ footer .Contact span {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
+  font-family: "Manrope", sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
