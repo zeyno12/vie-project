@@ -5,14 +5,7 @@ const openData=document.getElementById("second_li")
 openData.classList.toggle("active")
 });
 // swiper
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 5,
-    freeMode: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -22,11 +15,11 @@ var swiper = new Swiper(".mySwiper", {
     },
     breakpoints: {
       640: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 20,
       },
       768: {
-        slidesPerView: 4,
+        slidesPerView: 2,
         spaceBetween: 40,
       },
       1024: {
@@ -36,14 +29,7 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
   // swiper second
-  var swiperr = new Swiper(".mySwiper_2", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+
   var swiperr = new Swiper(".mySwiper_2", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -53,15 +39,15 @@ var swiper = new Swiper(".mySwiper", {
     },
     breakpoints: {
       640: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 20,
       },
       768: {
-        slidesPerView: 4,
+        slidesPerView: 2,
         spaceBetween: 40,
       },
       1024: {
-        slidesPerView: 5,
+        slidesPerView: 3,
         spaceBetween: 50,
       },
     },

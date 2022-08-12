@@ -2,10 +2,12 @@ body {
   background: $mainColor;
 }
 nav {
+  position: relative;
+  z-index: +4;
   @include nav(16px 0px, 100%);
   .mainlogo {
     img {
-      @include imagedetals(20%, auto, cover);
+      @include imagedetals(30%, auto, cover);
     }
   }
   .main_list {
@@ -30,7 +32,7 @@ nav {
     position: relative;
     visibility: hidden;
     #second_li {
-      width: 25%;
+      width: 30%;
       padding: 10px 0px;
       color: #fff;
       background: #1b1d21;
@@ -65,35 +67,44 @@ nav {
     }
   }
   .burger {
+    color: $whitecolor;
     display: none;
   }
 }
 @media (max-width: 768px) {
-  nav {
-    position: relative;
-    z-index: +3;
-    .main_list {
-      margin-top: 20px;
-      position: absolute;
-      width: 100%;
-      top: 88px;
-      left: 0;
-      right: 0;
-      background-color: white;
-      transform: translateX(-500px);
-      transition: 0.3 ease-in-out;
-      ul {
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        li {
-          padding: 12px 0px;
-        }
-      }
+  .mainlogo {
+    img {
+      max-width: 15%;
     }
-    .burger {
-      display: block;
-      color: $whitecolor;
+  }
+  .burger {
+    display: block !important;
+    color: $whitecolor;
+    i {
+      position: absolute;
+      right: 18px;
+      top: 27px;
+      font-size: 25px;
+    }
+  }
+  .main_list {
+    margin-top: 20px;
+    position: absolute;
+    width: 100%;
+    top: 88px;
+    left: 0;
+    right: 0;
+    background-color: #252527;
+    color: $whitecolor;
+    transform: translateX(-500px);
+    transition: 0.3 ease-in-out;
+    ul {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      li {
+        padding: 12px 0px;
+      }
     }
   }
 }
@@ -295,6 +306,11 @@ nav {
         color: #fff;
       }
     }
+    @media (max-width: 768px) {
+      gap: 12px;
+      display: flex;
+      flex-direction: column;
+    }
   }
   .goal_list {
     ul {
@@ -383,6 +399,11 @@ nav {
         i {
           color: #fff;
         }
+      }
+      @media (max-width: 768px) {
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
       }
     }
   }
@@ -658,8 +679,7 @@ nav {
         font-size: 2rem !important;
         color: #fff;
       }
-      i {
-        font-size: 100px;
+      .red_number {
         color: #f45162;
       }
     }
@@ -667,7 +687,7 @@ nav {
       text-align: center;
       button {
         background: rgba(72, 72, 72, 0.791);
-        padding: 4px 70px;
+        padding: 12px 60px;
         border-radius: 26px;
         a {
           text-decoration: none;
@@ -720,7 +740,7 @@ nav {
       &:hover {
         background: #f45162;
       }
-      padding: 15px 70px;
+      padding: 12px 60px;
       border-radius: 26px;
       a {
         text-decoration: none;
@@ -902,6 +922,9 @@ nav {
   .card_blog {
     background-color: #252527;
     border-radius: 20px;
+    width: 100%;
+    height: 244px;
+    overflow: hidden;
     .img_deep {
       img {
         object-position: center;
